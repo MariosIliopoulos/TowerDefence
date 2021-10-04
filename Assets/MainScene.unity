@@ -505,6 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62686949}
   - component: {fileID: 62686948}
+  - component: {fileID: 62686950}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -542,6 +543,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &62686950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62686947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e7003ed54b74642aca23b178d5eead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standartTurretPrefab: {fileID: 2926305375475258962, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
 --- !u!1001 &67761746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12624,11 +12638,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6349363497205303451, guid: 635212e77d5252c4296a9bf8458792f2, type: 3}
   m_PrefabInstance: {fileID: 1686868682}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1690729165 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2162163990471615185, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-  m_PrefabInstance: {fileID: 7160133939712591328}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1696678000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15908,64 +15917,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1296485450251189060, guid: ed1ba8e2baa5e4449b416d60b091a983, type: 3}
   m_PrefabInstance: {fileID: 5899114777898920461}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7160133939712591328
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 831125288, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1690729165}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582677568020057320, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2926305375475258962, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
-      propertyPath: m_Name
-      value: Turret
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
