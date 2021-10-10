@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 62686949}
   - component: {fileID: 62686948}
   - component: {fileID: 62686950}
+  - component: {fileID: 62686951}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -557,6 +558,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 2926305375475258962, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
   missileLauncherPrefab: {fileID: 2490485706890593678, guid: 1148c1cc176defe4fbe1aa81d091c5b0, type: 3}
+--- !u!114 &62686951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62686947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da098e3afb6ee84d82ddaced37fedee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &67761746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7549,7 +7563,7 @@ PrefabInstance:
       objectReference: {fileID: 1725338790}
     - target: {fileID: 4819775179140645860, guid: 19eb02455936a6c4c8816726be823fca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 4819775179140645861, guid: 19eb02455936a6c4c8816726be823fca, type: 3}
       propertyPath: m_Sprite
@@ -13080,6 +13094,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0e269e59d17784e9527e02d49e3fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 2926305375475258962, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 2490485706890593678, guid: 1148c1cc176defe4fbe1aa81d091c5b0, type: 3}
+    cost: 250
 --- !u!1001 &1725812455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16064,6 +16084,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1725338790}
+    - target: {fileID: 4819775179140645860, guid: 19eb02455936a6c4c8816726be823fca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandardTurret
+      objectReference: {fileID: 0}
     - target: {fileID: 4819775179140645862, guid: 19eb02455936a6c4c8816726be823fca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
