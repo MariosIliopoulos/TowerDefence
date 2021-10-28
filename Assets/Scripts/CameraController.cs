@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private bool doMovement = true;
+    public bool doMovement = true;
 
     public float panSpeed = 30f;
 
