@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da098e3afb6ee84d82ddaced37fedee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 9999
   startLives: 1
 --- !u!114 &62686952
 MonoBehaviour:
@@ -1054,6 +1054,7 @@ MonoBehaviour:
   ui: {fileID: 1411847842}
   upgradeCost: {fileID: 386591665}
   upgradeButton: {fileID: 1156101160}
+  sellAmount: {fileID: 1448987323}
 --- !u!1001 &106076856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2570,7 +2571,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 305620346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 90001618}
+        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &305620346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13270,7 +13283,7 @@ GameObject:
   - component: {fileID: 1448987324}
   - component: {fileID: 1448987323}
   m_Layer: 0
-  m_Name: Cost
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16121,13 +16134,13 @@ MonoBehaviour:
   missileLauncher:
     prefab: {fileID: 2490485706890593678, guid: 1148c1cc176defe4fbe1aa81d091c5b0, type: 3}
     cost: 250
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 2490485706890593678, guid: 6594d64c554011e4991c9df1cf14a4d9, type: 3}
+    upgradeCost: 200
   laserBeamer:
     prefab: {fileID: 7389364152864484176, guid: 30a39402c46dc8148bbfc9aa3d59d62c, type: 3}
     cost: 350
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 7389364152864484176, guid: 0f6b65b2e30746e4e82ff7678527cec6, type: 3}
+    upgradeCost: 250
 --- !u!1001 &1725812455
 PrefabInstance:
   m_ObjectHideFlags: 0
