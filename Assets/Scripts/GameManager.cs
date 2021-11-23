@@ -8,14 +8,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
 
-    //public static bool GameIsPaused;
-
-    //public GameObject pauseMenusUI;
-
     private void Start()
     {
         GameIsOver = false;
-        //GameIsPaused = false;
     }
 
     // Update is called once per frame
