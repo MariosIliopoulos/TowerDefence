@@ -16,6 +16,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Toggle()
     {
+        if (GameManager.GameIsOver)
+        {
+            return;
+        }
+
         ui.SetActive(!ui.activeSelf);
 
         if (ui.activeSelf)
@@ -35,6 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Menu()
     {
-        Debug.Log("Go to Menu");
+        Toggle();
+        SceneManager.LoadScene("MainMenu");
     }
 }
