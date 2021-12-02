@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
     public void Retry()
     {
         Toggle();
+        WaveSpawner.EnemiesAlive = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
