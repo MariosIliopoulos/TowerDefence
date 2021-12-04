@@ -5635,7 +5635,7 @@ GameObject:
   - component: {fileID: 627726019}
   - component: {fileID: 627726018}
   m_Layer: 5
-  m_Name: Button
+  m_Name: StartWaveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13489,7 +13489,7 @@ GameObject:
   - component: {fileID: 1364381078}
   - component: {fileID: 1364381077}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: StartNextPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17912,7 +17912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5c60086a1d91e4e86ad2494f75aa85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveCountdownText: {fileID: 0}
+  waveCountdownText: {fileID: 1941029341}
+  startWaveButton: {fileID: 0}
 --- !u!4 &1810905177
 Transform:
   m_ObjectHideFlags: 0

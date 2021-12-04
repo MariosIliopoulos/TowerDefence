@@ -18,10 +18,13 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    public Button startNextWaveButton;
+
     private void Update()
     {
         if (EnemiesAlive > 0)
         {
+            startNextWaveButton.interactable = false;
             return;
         }
 
@@ -31,6 +34,8 @@ public class WaveSpawner : MonoBehaviour
             countdown = timeBetweenWaves;
             return;
         }
+        startNextWaveButton.interactable = true;
+
         countdown -= Time.deltaTime;
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
@@ -68,4 +73,11 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         EnemiesAlive++;
     }
+
+    public void StartNextWave()
+    {
+        countdown = 0;
+        waveCountdownText.text = string.Format("{0:00}", WaveSpawner.countdown);
+    }
+
 }
