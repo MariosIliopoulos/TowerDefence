@@ -12,7 +12,7 @@ public class WaveSpawner : MonoBehaviour
 
     public float timeBetweenWaves = 5f;
     
-    public static float countdown = 2f;
+    private float countdown = 2f;
 
     public Text waveCountdownText;
 
@@ -77,7 +77,7 @@ public class WaveSpawner : MonoBehaviour
     public void StartNextWave()
     {
         countdown = 0;
-        waveCountdownText.text = string.Format("{0:00}", WaveSpawner.countdown);
+        waveCountdownText.text = string.Format("{0:00}", countdown);
     }
 
 }
