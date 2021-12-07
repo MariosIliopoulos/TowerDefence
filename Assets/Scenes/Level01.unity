@@ -654,6 +654,7 @@ MonoBehaviour:
   timeBetweenWaves: 10
   waveCountdownText: {fileID: 1941029341}
   startNextWaveButton: {fileID: 829193970}
+  gameManager: {fileID: 62686952}
 --- !u!4 &62686949
 Transform:
   m_ObjectHideFlags: 0
@@ -709,6 +710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 673242375}
+  nextLevel: Level02
+  levelToUnlock: 2
 --- !u!114 &62686953
 MonoBehaviour:
   m_ObjectHideFlags: 0
