@@ -41,7 +41,11 @@ public class Node : MonoBehaviour
             return;
         }
 
-        
+        if (turret == null)
+        {
+            buildManager.DeselectNode();
+
+        }
 
         if (turret != null)
         {
@@ -139,5 +143,4 @@ public class Node : MonoBehaviour
     {
         rend.material.color = startColor;
     }
-
 }
