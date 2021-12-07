@@ -653,7 +653,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 745797312}
   timeBetweenWaves: 10
   waveCountdownText: {fileID: 1941029341}
-  startNextWaveButton: {fileID: 0}
+  startNextWaveButton: {fileID: 829193970}
 --- !u!4 &62686949
 Transform:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 9999
-  startLives: 1
+  startLives: 10
 --- !u!114 &62686952
 MonoBehaviour:
   m_ObjectHideFlags: 0
