@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     [Header("Unity Stuff")]
     public Image healthBar;
 
-    public bool isDead = false;
+    private bool isDead = false;
 
     private void Start()
     {
