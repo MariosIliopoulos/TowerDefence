@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5703325936833382597}
   - component: {fileID: 8419421987393706758}
   - component: {fileID: 8851634031355500813}
-  - component: {fileID: -1336565861894584033}
+  - component: {fileID: 2912541684297711957}
   m_Layer: 0
   m_Name: Enemy_Fast
   m_TagString: Enemy
@@ -116,7 +116,7 @@ MonoBehaviour:
   worth: 25
   deathEffect: {fileID: 3260930113583864880, guid: 56c34b549f7ccb84d99fd6d23dafcc89, type: 3}
   healthBar: {fileID: 4232857069574006472}
---- !u!114 &-1336565861894584033
+--- !u!114 &2912541684297711957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
