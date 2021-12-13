@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
 {
+    public Branch[] branches;
+    private int counterBranch = 0;
 
     private Transform target;
     private int waypointIndex = 0;
@@ -39,8 +41,41 @@ public class EnemyMovement : MonoBehaviour
             EndPath();
             return;
         }
-        waypointIndex++;
-        target = Waypoints.points[waypointIndex];
+        else
+        {
+            if (branches.Length != 0)
+            {
+                if (waypointIndex == branches[counterBranch].branchPosition)
+                {
+                    int x = Random.Range(0, 2);
+                    if (x == 0)
+                    {
+                        waypointIndex++;
+                        target = Waypoints.points[waypointIndex];
+                        waypointIndex++;
+                    }
+                    else if (x == 1)
+                    {
+                        waypointIndex = waypointIndex + 2;
+                        target = Waypoints.points[waypointIndex];
+                    }
+                    if (counterBranch < branches.Length - 1)
+                    {
+                        counterBranch++;
+                    }
+                }
+                else
+                {
+                    waypointIndex++;
+                    target = Waypoints.points[waypointIndex];
+                }
+            }
+            else
+            {
+                waypointIndex++;
+                target = Waypoints.points[waypointIndex];
+            }
+        }
     }
 
     void EndPath()
