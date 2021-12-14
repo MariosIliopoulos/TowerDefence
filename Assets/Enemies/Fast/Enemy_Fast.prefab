@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234a71ab3a1477a4c938d455b2a4ca26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  branches:
-  - branchPosition: 1
+  waypointsPos: {fileID: 0}
+  way: {fileID: 0}
 --- !u!1 &2291994059400926776
 GameObject:
   m_ObjectHideFlags: 0
