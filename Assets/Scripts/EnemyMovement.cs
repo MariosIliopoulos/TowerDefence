@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
 {
-    public Branch[] branches;
-    private int counterBranch = 0;
+    private Waypoints waypointsPos;
+
+    
 
     private Transform target;
     private int waypointIndex = 0;
 
     private Enemy enemy;
 
+    private int counterBranch = 0;
+
     private void Start()
     {
         enemy = GetComponent<Enemy>();
+
+        waypointsPos = FindObjectOfType<Waypoints>();
 
         target = Waypoints.points[0];
     }
@@ -43,9 +49,10 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            if (branches.Length != 0)
+            
+            if (waypointsPos.branchAmount.Length!=0)
             {
-                if (waypointIndex == branches[counterBranch].branchPosition)
+                if (waypointIndex == waypointsPos.branchAmount[counterBranch])
                 {
                     int x = Random.Range(0, 2);
                     if (x == 0)
@@ -59,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
                         waypointIndex = waypointIndex + 2;
                         target = Waypoints.points[waypointIndex];
                     }
-                    if (counterBranch < branches.Length - 1)
+                    if (counterBranch < waypointsPos.branchAmount.Length-1)
                     {
                         counterBranch++;
                     }
