@@ -9,9 +9,11 @@ public class TurretBlueprint
 
     public GameObject prefab;
     public int cost;
+    public float range;
 
     public GameObject upgradedPrefab;
     public int upgradeCost;
+    public float upgradedRange;
 
     public int GetSellAmount()
     {

@@ -790,6 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildEffect: {fileID: 6322149939736772842, guid: ac663437cfaad254a96922846b58347f, type: 3}
   nodeUI: {fileID: 90001618}
+  cylinder: {fileID: 1410201382}
 --- !u!114 &62686951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14767,6 +14768,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406216388}
   m_CullTransparentMesh: 1
+--- !u!1 &1410201377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410201381}
+  - component: {fileID: 1410201380}
+  - component: {fileID: 1410201379}
+  - component: {fileID: 1410201378}
+  - component: {fileID: 1410201382}
+  m_Layer: 0
+  m_Name: CylinderRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!136 &1410201378
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410201377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1410201379
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410201377}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7ad4e85626f8f6543b2b79dd417aac43, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1410201380
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410201377}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1410201381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410201377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 15, y: 0.5, z: 15}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1410201382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410201377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac9da445a8043e4a88785fb67464139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cylinder: {fileID: 1410201377}
 --- !u!1 &1411847842
 GameObject:
   m_ObjectHideFlags: 0
@@ -18171,18 +18282,24 @@ MonoBehaviour:
   standardTurret:
     prefab: {fileID: 2926305375475258962, guid: 0a9c54e6e6502f643ab5cad2e91ca37a, type: 3}
     cost: 100
+    range: 15
     upgradedPrefab: {fileID: 2926305375475258962, guid: 005e28c60acc3d74592d72b053efce8f, type: 3}
     upgradeCost: 60
+    upgradedRange: 20
   missileLauncher:
     prefab: {fileID: 2490485706890593678, guid: 1148c1cc176defe4fbe1aa81d091c5b0, type: 3}
     cost: 250
+    range: 30
     upgradedPrefab: {fileID: 2490485706890593678, guid: 6594d64c554011e4991c9df1cf14a4d9, type: 3}
     upgradeCost: 200
+    upgradedRange: 40
   laserBeamer:
     prefab: {fileID: 7389364152864484176, guid: 30a39402c46dc8148bbfc9aa3d59d62c, type: 3}
     cost: 350
+    range: 20
     upgradedPrefab: {fileID: 7389364152864484176, guid: 0f6b65b2e30746e4e82ff7678527cec6, type: 3}
     upgradeCost: 250
+    upgradedRange: 30
 --- !u!1001 &1725812455
 PrefabInstance:
   m_ObjectHideFlags: 0

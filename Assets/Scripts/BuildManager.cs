@@ -24,6 +24,8 @@ public class BuildManager : MonoBehaviour
 
     public NodeUI nodeUI;
 
+    public Range cylinder;
+
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
@@ -41,12 +43,14 @@ public class BuildManager : MonoBehaviour
         turretToBuild = null;
 
         nodeUI.SetTarget(node);
+        cylinder.SetTarget(node);
     }
 
     public void DeselectNode()
     {
         selectedNode = null;
         nodeUI.Hide();
+        cylinder.Hide();
     }
 
     public void DeselectTurret()
